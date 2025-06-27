@@ -20,6 +20,7 @@ public class Book implements Serializable {
 	private long unitsInStock;	// 재고개수
 	private String releaseDate;	// 출판일(월/년)
 	private String condition;		// 신제품,구제품,리퍼브제품
+	private String filename;		// 이미지 파일명
 	
 	// 기본 생성자
 	public Book() {
@@ -76,6 +77,10 @@ public class Book implements Serializable {
 	public String getCondition() {
 		return condition;
 	}
+	
+	public String getFilename() {
+		return filename;
+	}
 
 	// 세터
 	public void setBookId(String bookId) {
@@ -118,7 +123,9 @@ public class Book implements Serializable {
 		this.condition = condition;
 	}
 	
-	
+	public void setFilename(String filename) {
+		this.filename = filename;
+	}
 	
 	
 	
