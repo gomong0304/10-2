@@ -22,6 +22,10 @@ public class Book implements Serializable {
 	private String condition;		// 신제품,구제품,리퍼브제품
 	private String filename;		// 이미지 파일명
 	
+	//p469 추가
+	private int quantity;			// 장바구니에 담은 개수
+	
+
 	// 기본 생성자
 	public Book() {
 		super();
@@ -81,6 +85,10 @@ public class Book implements Serializable {
 	public String getFilename() {
 		return filename;
 	}
+	
+	public int getQuantity() {
+		return quantity;
+	}
 
 	// 세터
 	public void setBookId(String bookId) {
@@ -125,6 +133,18 @@ public class Book implements Serializable {
 	
 	public void setFilename(String filename) {
 		this.filename = filename;
+	}
+	
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	@Override
+	public String toString() {
+		return "Book [bookId=" + bookId + ", name=" + name + ", unitPrice=" + unitPrice + ", author=" + author
+				+ ", description=" + description + ", publisher=" + publisher + ", category=" + category
+				+ ", unitsInStock=" + unitsInStock + ", releaseDate=" + releaseDate + ", condition=" + condition
+				+ ", filename=" + filename + ", quantity=" + quantity + "]";
 	}
 	
 	
